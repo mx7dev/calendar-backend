@@ -52,8 +52,13 @@ const loginUsuario= async (req,res = response)=>{
     const { email,password } = req.body;
 
     try {
+        console.log(email);
+        console.log(email);
+        
 
         let usuario = await  Usuario.findOne({email:email});
+
+        console.log(usuario);
 
         if ( !usuario) {
             return res.status(400).json({
